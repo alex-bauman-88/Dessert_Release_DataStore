@@ -23,7 +23,7 @@ import com.example.dessertrelease.R
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 
-/*
+/**
  * View model of Dessert Release components
  */
 class DessertReleaseViewModel() : ViewModel() {
@@ -33,7 +33,7 @@ class DessertReleaseViewModel() : ViewModel() {
     // UI states access for various [DessertReleaseUiState]
     val uiState: StateFlow<DessertReleaseUiState> = _uiState
 
-    /*
+    /**
      * [selectLayout] change the layout and icons accordingly and
      * save the selection in DataStore through [userPreferencesRepository]
      */
@@ -50,7 +50,7 @@ class DessertReleaseViewModel() : ViewModel() {
     }
 }
 
-/*
+/**
  * Data class containing various UI States for Dessert Release screens
  */
 data class DessertReleaseUiState(
