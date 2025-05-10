@@ -7,7 +7,7 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.dessertrelease.data.UserPreferencesRepository
 
-/** Here we initialize the dependencies defined in the DessertReleaseApplication class
+/** Here we manually initialize the dependencies defined in the DessertReleaseApplication class
 before launching the MainActivity.
 
 Context.dataStore extension property creates a DataStore instance using preferencesDataStore.
@@ -28,6 +28,8 @@ private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(
 )
 
 class DessertReleaseApplication : Application() {
+
+    // class property of DessertReleaseApplication
     lateinit var userPreferencesRepository: UserPreferencesRepository
 
     override fun onCreate() {
