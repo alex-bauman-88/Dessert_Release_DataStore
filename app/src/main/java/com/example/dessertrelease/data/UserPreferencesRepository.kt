@@ -86,8 +86,8 @@ class UserPreferencesRepository(
     */
     val isLinearLayout: Flow<Boolean> = dataStore.data // To read a preference
         .catch { // this: FlowCollector<Preferences>
-            if (it is IOException){
-                Log.e(TAG, "Error reading preferences", it) // it: Throwable
+            if (it is IOException){ // it: Throwable
+                Log.e(TAG, "Error reading preferences", it)
                 emit(emptyPreferences())
             } else {
                 throw it // it: Throwable
